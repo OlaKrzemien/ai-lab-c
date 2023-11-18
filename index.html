@@ -1,0 +1,81 @@
+<!Doctype html>
+<html lang="pl">
+    <head>
+        <title>Mapa puzzle</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="mapa, puzzle"/>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="leaflet-1.7.1/leaflet.css" />
+        <script src="leaflet-1.7.1/leaflet-src.js"></script>
+        <script src="leaflet-1.7.1/leaflet-providers.js"></script>
+        <script src="leaflet-1.7.1/leaflet-image.js"></script>
+        
+
+    </head>
+    <body>
+        <header>
+            <h1>Puzzle mapa</h1>
+            Szerokość geograficzna: <span id="longitude"></span><br>
+            Długość geograficzna: <span id="latitude"></span><br>
+            <br>wybierz miejsce na mapie i zrób z niego puzzle<br>
+            <div id="buttons">
+                <button id="getLocation" onclick="getLocation()">Moja geolokalizacja</button>
+                <button id="toPuzzleButton" onclick="toPuzzle()">Zamień w puzzle</button>
+            </div><br>
+        </header>
+        <div id="up">
+            <div id="map" width="700" height="450">
+           
+            </div>
+            
+            
+            <div id="board">
+       
+                <table id="puzzleTable" >
+
+                    <tr>
+                        <td id="p1" class="puzzlePlace"></td>
+                        <td id="p2" class="puzzlePlace"></td>
+                        <td id="p3" class="puzzlePlace"></td>
+                        <td id="p4" class="puzzlePlace"></td>
+                    </tr>
+            
+                    <tr>
+                        <td id="p5" class="puzzlePlace"></td>
+                        <td id="p6" class="puzzlePlace"></td>
+                        <td id="p7" class="puzzlePlace"></td>
+                        <td id="p8" class="puzzlePlace"></td>
+                    </tr>
+            
+                    <tr>
+                        <td id="p9" class="puzzlePlace"></td>
+                        <td id="p10" class="puzzlePlace"></td>
+                        <td id="p11" class="puzzlePlace"></td>
+                        <td id="p12" class="puzzlePlace"></td>
+                    </tr>
+            
+                    <tr>
+                        <td id="p13" class="puzzlePlace"></td>
+                        <td id="p14" class="puzzlePlace"></td>
+                        <td id="p15" class="puzzlePlace"></td>
+                        <td id="p16" class="puzzlePlace"></td>
+                    </tr>
+            
+                </table> 
+            </div>
+
+        </div>
+        
+        <div id="puzzle">
+           
+
+        </div>
+        <canvas id="rasterMap" hidden></canvas>
+
+
+        <script src="script.js"></script>
+    </body>
+
+
+</html>
